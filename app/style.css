@@ -1,0 +1,30 @@
+html, body { margin: 0; min-height: 100%; background: #14061f; color: #f5eefc; font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.app { display: flex; gap: 28px; align-items: flex-start; justify-content: center; padding: 22px; box-sizing: border-box; }
+.controls { display: flex; flex-direction: column; gap: 14px; width: 330px; flex: none; }
+.controls h1 { margin: 0; font-size: 30px; line-height: 1.05; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(90deg, #ff7a2f, #ff2e88, #00e5ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tag { margin: 0; color: #c9a8e0; }
+fieldset { border: 1px solid #4a2358; border-radius: 12px; padding: 12px; margin: 0; display: flex; flex-direction: column; gap: 10px; background: #1e0b2e; }
+legend { font-weight: 800; color: #ffe14d; padding: 0 6px; }
+label { display: flex; flex-direction: column; gap: 5px; font-weight: 600; }
+label.check { flex-direction: row; align-items: center; gap: 8px; }
+.hint { margin: 0; color: #a98bc2; font-size: 13px; font-weight: 400; }
+input[type=text], select { font: inherit; padding: 8px; border: 1px solid #6b3a80; border-radius: 8px; background: #2a1140; color: #fff; }
+input[type=file] { font: inherit; color: #d9c2ec; }
+input[type=range] { width: 100%; accent-color: #ff2e88; }
+button { font: inherit; font-weight: 700; padding: 9px 12px; border: 0; border-radius: 8px; background: #3a1a52; color: #fff; cursor: pointer; }
+button:hover { background: #4d2368; }
+button.active { background: #ff2e88; }
+button.ghost { background: transparent; border: 1px solid #ff2e88; color: #ff9ec7; }
+button.big { background: linear-gradient(90deg, #ff7a2f, #ff2e88); font-size: 17px; padding: 13px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; }
+.row button { flex: 1 1 auto; padding: 8px 6px; font-size: 13px; }
+#status { margin: 0; min-height: 1.2em; color: #7dffce; }
+canvas { width: min(72vh, 58vw); height: auto; box-shadow: 0 12px 44px rgba(0, 0, 0, 0.55); border-radius: 4px; position: sticky; top: 22px; background: #14061f; }
+body.shot-cover .controls { display: none; }
+body.shot-cover .app { padding: 0; }
+body.shot-cover canvas { width: 100vw; height: 100vh; object-fit: contain; box-shadow: none; border-radius: 0; position: static; }
+@media (max-width: 900px) {
+  .app { flex-direction: column; align-items: center; }
+  canvas { width: min(94vw, 640px); position: static; }
+  .controls { width: min(94vw, 480px); }
+}
